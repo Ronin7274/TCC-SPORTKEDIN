@@ -33,7 +33,7 @@
                         </div>
                         <button type="submit" class="btn btn-primary w-100">Entrar</button>
                         <p class="text-center mt-3">
-                            Não tem uma conta? <a href="cadastro.html">Cadastre-se</a>
+                            Não tem uma conta? <a href="Cadastro_Clube.php" >Cadastre-se</a>
                         </p>
                     </form>
                 </div>
