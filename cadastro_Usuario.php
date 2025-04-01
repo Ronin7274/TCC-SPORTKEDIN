@@ -8,9 +8,6 @@
     <link rel="stylesheet" href="cadastro.css">
 </head>
 <body class="d-flex justify-content-center align-items-center vh-100" style="background-color: #f4f4f4;">
-
-
-    
     <script>
         function confereSenha(){
             const senha = document.querySelector('input[name=senha]');
@@ -31,31 +28,24 @@
         <h3 class="text-center mb-3">Cadastro</h3>
         <form id="formCadastro" onsubmit="senhaOK()" action="post">>
             <div class="mb-3">
-                <label for="CNPJ" class="form-label">CNPJ</label>
+                <label for="name" class="form-label">Nome</label>
                 <input type="text" id="nome" class="form-control" required>
            
            
-                <label for="CCF" class="form-label">Certificado de Clube Formador</label>
-                <input type="text" id="nome" class="form-control" required>
+                <label for="CPF" class="form-label">CPF</label>
+                <input type="text" id="cpf" class="form-control" required>
+
+                <label for="rg" class="form-label">RG</label>
+                <input type="text" id="rg" class="form-control" required>
+            
+            
+                <label for="telefone" class="form-label">Telefone</label>
+                <input type="text" id="telefone" class="form-control" required>
             
 
             
-                <label for="Estatuto" class="form-label">Estatuto</label>
-                <input type="Estatuto" id="Estatuto" class="form-control" required>
-            
-
-
-            
-                <label for="Nome" class="form-label">Nome</label>
-                <input type="Nome" id="Nome" class="form-control" required>
-            
-
-
-            
-                <label for="modalidade" class="form-label">Modalidade do clube</label>
-                <input type="modalidade" id="modalidade" class="form-control" required>
-            
-
+                <label for="endereco" class="form-label">Endereço</label>
+                <input type="text" id="endereco" class="form-control" required>
 
             
                 <h2>Consultar CEP</h2>
