@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="cadastro.css">
 </head>
 <body class="d-flex justify-content-center align-items-center vh-100" style="background-color: #f4f4f4;">
+
+    <!-- Função para ver se as senhas são iguais -->
     <script>
         function confereSenha(){
             const senha = document.querySelector('input[name=senha]');

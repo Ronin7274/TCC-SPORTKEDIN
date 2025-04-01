@@ -1,4 +1,4 @@
-CREATE SCHEMA IF NOT EXISTS `sportkedin` DEFAULT CHARACTER SET utf8;
+CREATE SCHEMA `sportkedin`;
 USE `sportkedin`;
 
 CREATE TABLE IF NOT EXISTS `Usuario` (
