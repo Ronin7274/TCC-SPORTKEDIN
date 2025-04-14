@@ -7,18 +7,31 @@
     <title>criação da peneira</title>
 </head>
 <body>
-    <form>
+    <form method="POST">
         <!--campo onde será definido o nome da peneira-->
         <div class="div-nome-peneira">
-            <label for="exampleFormControlInput1" class="label-nome-peneira">Nome Peneira</label>
-            <input type="text" class="input-nome-peneira" id="id-nome-peneira" placeholder="Nome da Peneira">
+            <label for="nome-peneira" class="label-nome-peneira">Nome Peneira</label>
+            <input type="text" class="input-nome-peneira" name="nome-peneira" id="nome-peneira" placeholder="Nome da Peneira">
         </div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </form>
+        <!--campo onde será definida data de acontecimento da peneira-->
+        <div calss="div-data-peneira">
+            <label for="data-peneira" class="label-data-peneira">data do evento</label>
+            <input type="datetime-local" class="input-data-peneira" name="data-peneira" id="nome-peneira">
+        </div>
+        <!--campo onde será definida a data de fechamento da peneira-->
+        <div class="div-data-fechamento-peneira">
+            <label for="data-fechamento-peneira" class="label-data-peneira">Data de fechamento da peneira</label>
+            <input type="datetime-local" class="input-data-fechamento-peneira" name="data-peneira" id="data-fechamento-peneira">
+        </div>
+        <!--campo onde será definida a quantidade de vagas da peneira-->
+        <div class="div-vagas-peneira">
+            <label for="vagas-peneira" class="label-vagas-peneira">Numero de vagas da peneira</label>
+            <input type="number" class="input-vagas-peneira" name="vagas-peneira" id="vagas-peneira">
+        </div>
+        <!--campo onde será definido o texto de descrição da peneira-->
+        <div class="div-texto-peneira">
+            <label for="texto-peneira" class="label-texo-peneira"></label>
+            <input type="text" class="input-texto-peneira" name="texto-peneira" id="texto-peneira" placeholder="Descrição da peneira">
+        </div>
 </body>
 </html>
