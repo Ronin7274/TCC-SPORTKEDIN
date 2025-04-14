@@ -33,7 +33,8 @@
                         </div>
                         <button type="submit" class="btn btn-primary w-100">Entrar</button>
                         <p class="text-center mt-3">
-                            Não tem uma conta? <a href="cadastroUsuario.php" >Cadastre-se</a>
+                            Não tem uma conta? <a href="../cadastroUsuario.php" >Cadastre-se</a> 
+                            <!--direciona o usuario para o caminho indicado no href. O "../" serve para mandar o usuario para a pasta anterior-->
                         </p>
                     </form>
                 </div>

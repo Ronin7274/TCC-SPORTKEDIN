@@ -10,13 +10,13 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <form action="loginUsuario.php">
+        <!--direciona o usuario para o caminho indicado no action-->
+    <form action="cadastro/login/loginUsuario.php">
         <button type="submit" value="Atletas" class="btn btn-primary w-100">Atletas</button>
 
     </form>
-
-    <form action="loginClubes.php">
+    
+    <form action="cadastro/login/loginClubes.php">
         <button type="submit" value="Clubes" class="btn btn-primary w-100">Clubes</button>
 
     </form>

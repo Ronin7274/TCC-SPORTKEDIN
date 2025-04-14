@@ -74,7 +74,8 @@
             <button type="submit" class="btn btn-success w-100">Cadastrar</button>
         </form>
         <p class="text-center mt-3">
-            Já tem uma conta? <a href="index.php">Faça login</a>
+            Já tem uma conta? <a href="../index.php">Faça login</a>
+            <!--direciona o usuario para o caminho indicado no href. O "../" serve para mandar o usuario para a pasta anterior-->
         </p>
     </div>
 </body>
