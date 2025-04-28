@@ -17,12 +17,12 @@
         $texto_peneira = $_POST["texto_peneira"];
         //garante que o numero recebido seja inteiro
         $vagas_peneira = intval($_POST["vagas_peneira"]);
-        $vagas = [];
+        $vagas = 1;//[];
         //cria o array de 1 até o número digitado
-        for ($i = 1; $i <= $vagas_peneira; $i++) {
-            $vagas[] = $i;
-        }
-        echo "nome: $nome_peneira, data: $data_peneira, fechamento: $fechamento_peneira, vagas: $vagas_peneira";
+        //for ($i = 1; $i <= $vagas_peneira; $i++) {
+            //$vagas[] = $i;
+        //}
+        //echo "nome: $nome_peneira, data: $data_peneira, fechamento: $fechamento_peneira, vagas: $vagas_peneira";
     }
     ?>
 
@@ -36,7 +36,12 @@
         <input type="datetime-local" readonly  class="teste_peneira" value="<?php echo "$fechamento_peneira"; ?>">
         <!--arrey que deve mostrar a quantidade total de vagas e a quantidade preenchidas-->
         <label class="teste_peneira">Quantidade de vagas</label>
-        <input type="number"  readonly class="teste_peneira" value="<?php echo "$vagas" ?> / <?php echo "$vagas_peneira"; ?>">
+        <input type="number" readonly class="teste_peneira" value="<?php echo $vagas . ' ' . $vagas_peneira; ?>">
+    </div>
+
+    <div>
+        <label class="teste_peneir">Descrição</label>
+        <input readonly type="text" value="<?php echo "$texto_peneira" ?>">
     </div>
 
 
