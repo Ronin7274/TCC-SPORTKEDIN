@@ -1,0 +1,15 @@
+.body{
+    padding: 0;
+    margin: 0;
+    background-color: brown;
+}
+
+.conteudo{
+   align-content: center;
+  margin: 15%;
+  margin-left: 35%;
+  margin-right: 35%;
+   border: 25%;
+   font-family: Arial, Helvetica, sans-serif;
+
+}

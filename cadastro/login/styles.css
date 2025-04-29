@@ -11,16 +11,16 @@ body {
 }
 
 .btn-primary {
-    background-color: #007bff;
+    background-color: #005e11;
     border: none;
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
+    background-color: #0d6300;
 }
 
 .input-group-text {
-    background-color: #e9ecef;
+    background-color: #bbff00;
     border-right: none;
 }
 

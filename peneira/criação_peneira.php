@@ -6,11 +6,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>criação da peneira</title>
+    <link rel="stylesheet" href="criacaoPeneira.css">
 </head>
 
 <body>
+    <div class= "conteudo">
+    <h1>Criação Da Peneira</h1>
     <form method="POST" action="peneira.php">
         <!--campo onde será definido o nome da peneira-->
+        
         <div class="div-nome-peneira">
             <label for="nome-peneira" class="label-nome-peneira">Nome Peneira</label>
             <input type="text" class="input-nome-peneira" name="nome_peneira" id="nome-peneira" required placeholder="Nome da Peneira">
@@ -40,8 +44,9 @@
             <input type="text" class="input-texto-peneira" name="texto_peneira" id="texto-peneira" required placeholder="Descrição da peneira">
         </div>
         <button type="submit" name="criar-peneira" class="criar-peneira">Criar peneira</button>
+        
     </form>
-
+    </div>
 </body>
 
 </html>
