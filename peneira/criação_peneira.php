@@ -35,7 +35,7 @@
         <!--campo onde será definida a quantidade de vagas da peneira-->
         <div class="div-vagas-peneira">
             <label for="vagas-peneira" class="label-vagas-peneira">Numero de vagas da peneira</label>
-            <input type="number" class="input-vagas-peneira" name="vagas_peneira" required id="vagas-peneira">
+            <input type="number" class="input-vagas-peneira" min=1 name="vagas_peneira" required id="vagas-peneira">
         </div>
 
         <!--campo onde será definido o texto de descrição da peneira-->
