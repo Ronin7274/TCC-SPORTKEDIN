@@ -1,5 +1,5 @@
 body {
-    background-color: s#ffffff;
+   background-image: url('../../imagens/2.png');
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,19 +8,22 @@ body {
 
 .card {
     border-radius: 10px;
+    background-color: rgba(61, 61, 61, 0.5);
+    color: #f1f1f1;
+    
 }
 
 .btn-primary {
-    background-color: #005e11;
+    background-color: #858585;
     border: none;
 }
 
 .btn-primary:hover {
-    background-color: #0d6300;
+    background-color: #858585;
 }
 
 .input-group-text {
-    background-color: #bbff00;
+    background-color:#858585;
     border-right: none;
 }
 
@@ -35,7 +38,7 @@ body {
 }
 
 .dropbtn {
-    background-color: #4CAF50;
+    background-color: #0d6300;
     color: white;
     padding: 10px 15px;
     border: none;
@@ -64,4 +67,10 @@ body {
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+
+.button
+{
+   background-color: black;
 }

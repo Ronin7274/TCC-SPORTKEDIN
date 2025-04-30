@@ -29,7 +29,7 @@
 
     <div class="card p-4 shadow-lg" style="width: 350px;">
         <h3 class="text-center mb-3">Cadastro</h3>
-        <form id="formCadastro" onsubmit="senhaOK()" action="post">>
+        <form id="formCadastro" onsubmit="senhaOK()" action="post">
             <div class="mb-3">
                 <label for="CNPJ" class="form-label">CNPJ</label>
                 <input type="text" id="nome" class="form-control" required>
