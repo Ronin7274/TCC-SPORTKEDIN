@@ -16,14 +16,19 @@
 <body>
     <div class= "conteudo">
     <h1>Criação Da Peneira</h1>
-    <form method="POST" action="peneira.php">
+    <form method="POST" action="salvar_peneira.php">
         <!--campo onde será definido o nome da peneira-->
         
         <div class="div-nome-peneira">
             <label for="nome-peneira" class="label-nome-peneira">Nome Peneira</label>
             <input type="text" class="input-nome-peneira" name="nome_peneira" id="nome-peneira" required placeholder="Nome da Peneira">
         </div>
-
+        <!-- ignorar por hora
+        <div>
+            <label for="modalidade-peneira" class="label-modalidade-peneira">Modalidade</label>
+            <input type="search" require list="modalidades">
+        </div>
+        -->
         <!--campo onde será definida data de acontecimento da peneira-->
         <div calss="div-data-peneira">
             <label for="data-peneira" class="label-data-peneira">data do evento</label>
@@ -49,6 +54,24 @@
         </div>
         <button type="submit" name="criar-peneira" class="criar-peneira">Criar peneira</button>
         
+
+        <!-- ignorar por hora
+        <datalist id="modalidades">
+            <option value="futebol"></option>
+            <option value="basquete"></option>
+            <option value="volei"></option>
+            <option value="natacao"></option>
+            <option value="surf"></option>
+            <option value="tenis"></option>
+            <option value="tenis de mesa"></option>
+            <option value="basebol"></option>
+            <option value="badminton"></option>
+            <option value="hockey"></option>
+            <option value="altetismo"></option>
+            <option value="artes marciais"></option>
+            <option value="artes cenicas"></option>
+        </datalist>   
+        -->
     </form>
     </div>
 </body>
