@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .container {
     width: 100%;
     max-width: 500px; /* define o limite do conteúdo dentro da faixa azul */
@@ -71,3 +72,72 @@ input {
     color: white; 
     background-color: rgba(0, 0, 0, 0.5); 
 }
+=======
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropbtn {
+        background-color: #6d7386;
+        color: white;
+        padding: 3px 85px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 120px;
+        box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 1000px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+    }
+    
+    input {
+        padding: 10px;
+        width: 150px;
+        text-align: center;
+        font-size: 16px;
+    }
+    
+    button {
+        padding: 10px;
+        font-size: 16px;
+        background: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background: #45a049;
+    }
+    
+    #resultado {
+        margin-top: 20px;
+        font-size: 18px;
+    }
+>>>>>>> 03ef8674b56d9c70d58848a98bccb58b29331ade

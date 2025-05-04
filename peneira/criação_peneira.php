@@ -6,7 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>criação da peneira</title>
+<<<<<<< HEAD
     <link rel="stylesheet" href="criacaoPeneira.css?v=1">
+=======
+    <link rel="stylesheet" href="criacaoPeneira.css">
+>>>>>>> 03ef8674b56d9c70d58848a98bccb58b29331ade
 </head>
 
 <body>

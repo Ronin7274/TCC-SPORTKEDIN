@@ -1,16 +1,27 @@
+<<<<<<< HEAD
 * { 
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+=======
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+>>>>>>> 03ef8674b56d9c70d58848a98bccb58b29331ade
 }
 
 body {
     padding: 40px;
     background-color: #f9f9f9;
+<<<<<<< HEAD
     color: black;
     background-image: url('../imagens/SPORT(2).png');
     background-size: 1350px;
+=======
+>>>>>>> 03ef8674b56d9c70d58848a98bccb58b29331ade
 }
 
 .conteudo {
@@ -21,9 +32,12 @@ body {
 h1 {
     text-align: center;
     margin-bottom: 40px;
+<<<<<<< HEAD
     font-size: 2.5rem;
     font-weight: bold;
     color: black;
+=======
+>>>>>>> 03ef8674b56d9c70d58848a98bccb58b29331ade
 }
 
 form {
@@ -32,6 +46,10 @@ form {
     gap: 30px;
 }
 
+<<<<<<< HEAD
+=======
+/* Nome da peneira - full width */
+>>>>>>> 03ef8674b56d9c70d58848a98bccb58b29331ade
 .div-nome-peneira label,
 .div-data-peneira label,
 .div-data-fechamento-peneira label,
@@ -40,6 +58,7 @@ form {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
+<<<<<<< HEAD
     color: black;
 }
 
@@ -66,6 +85,18 @@ form {
     border-color: #00ff84;
 }
 
+=======
+}
+
+.input-nome-peneira,
+.input-texto-peneira {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Two columns: data_peneira (left) and fechamento_peneira (right) */
+>>>>>>> 03ef8674b56d9c70d58848a98bccb58b29331ade
 .data-row {
     display: flex;
     gap: 20px;
@@ -76,11 +107,32 @@ form {
     flex: 1;
 }
 
+<<<<<<< HEAD
+=======
+.input-data-peneira,
+.input-data-fechamento-peneira {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Vagas aligned to right of fechamento */
+>>>>>>> 03ef8674b56d9c70d58848a98bccb58b29331ade
 .div-vagas-peneira {
     width: 25%;
     align-self: flex-end;
 }
 
+<<<<<<< HEAD
+=======
+.input-vagas-peneira {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Texto peneira - centered below the row */
+>>>>>>> 03ef8674b56d9c70d58848a98bccb58b29331ade
 .div-texto-peneira {
     width: 100%;
     display: flex;
@@ -88,15 +140,32 @@ form {
     align-items: center;
 }
 
+<<<<<<< HEAD
 .criar-peneira {
     padding: 12px 24px;
     font-size: 18px;
     background-color: #00ff84;
     color: black;
+=======
+.input-texto-peneira {
+    width: 100%;
+    max-width: 800px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Submit button - centered */
+.criar-peneira {
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+>>>>>>> 03ef8674b56d9c70d58848a98bccb58b29331ade
     border: none;
     cursor: pointer;
     align-self: center;
     border-radius: 5px;
+<<<<<<< HEAD
     font-weight: bold;
 }
 
@@ -106,4 +175,10 @@ form {
 
 .criar-peneira:active {
     background-color: #00ff84;
+=======
+}
+
+.criar-peneira:hover {
+    background-color: #0056b3;
+>>>>>>> 03ef8674b56d9c70d58848a98bccb58b29331ade
 }

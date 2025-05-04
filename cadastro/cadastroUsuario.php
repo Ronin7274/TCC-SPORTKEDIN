@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<<<<<<< HEAD
     <link rel="stylesheet" href="cadastro.css?v=1">
 
+=======
+    <link rel="stylesheet" href="cadastro.css">
+>>>>>>> 03ef8674b56d9c70d58848a98bccb58b29331ade
 </head>
 <body class="d-flex justify-content-center align-items-center vh-100" style="background-color: #f4f4f4;">
 
@@ -29,7 +33,11 @@
 
     <div class="card p-4 shadow-lg" style="width: 350px;">
         <h3 class="text-center mb-3">Cadastro</h3>
+<<<<<<< HEAD
         <form id="formCadastro" onsubmit="senhaOK()" action="post">
+=======
+        <form id="formCadastro" onsubmit="senhaOK()" action="post">>
+>>>>>>> 03ef8674b56d9c70d58848a98bccb58b29331ade
             <div class="mb-3">
                 <label for="name" class="form-label">Nome</label>
                 <input type="text" id="nome" class="form-control" required>
