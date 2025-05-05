@@ -1,5 +1,5 @@
 <?php
-require_once 'conexao_peneira.php';
+require_once '../conexao.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $tipo = $_POST['nome_peneira'];
