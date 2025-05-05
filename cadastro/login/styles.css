@@ -1,14 +1,8 @@
-<<<<<<< HEAD
 
 body {
    background-image: url('../../imagens/2.png');
    background-size: 1366px; 
    display: flex;
-=======
-body {
-   background-image: url('../../imagens/2.png');
-    display: flex;
->>>>>>> 03ef8674b56d9c70d58848a98bccb58b29331ade
     justify-content: center;
     align-items: center;
     height: 100vh;

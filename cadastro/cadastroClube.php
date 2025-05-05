@@ -5,11 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<<<<<<< HEAD
     <link rel="stylesheet" href="cadastro.css?v=1">
-=======
-    <link rel="stylesheet" href="cadastro.css">
->>>>>>> 03ef8674b56d9c70d58848a98bccb58b29331ade
 </head>
 <body class="d-flex justify-content-center align-items-center vh-100" style="background-color: #f4f4f4;">
 
@@ -66,11 +62,7 @@
                 <input type="text" id="cep" placeholder="Digite o CEP" maxlength="8">
                 <button onclick="buscarCep()">Buscar</button>
                 <div id="resultado"></div>
-<<<<<<< HEAD
                 
-=======
-                <script src="script.js"></script>
->>>>>>> 03ef8674b56d9c70d58848a98bccb58b29331ade
                 
             
             
@@ -95,8 +87,5 @@
         </p>
     </div>
 </body>
-<<<<<<< HEAD
 <script src="script.js"></script>
-=======
->>>>>>> 03ef8674b56d9c70d58848a98bccb58b29331ade
 </html>

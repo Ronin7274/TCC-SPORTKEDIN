@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .container {
     width: 100%;
     max-width: 500px; /* define o limite do conteúdo dentro da faixa azul */
@@ -72,7 +71,6 @@ input {
     color: white; 
     background-color: rgba(0, 0, 0, 0.5); 
 }
-=======
 
     .dropdown {
         position: relative;
@@ -140,4 +138,3 @@ input {
         margin-top: 20px;
         font-size: 18px;
     }
->>>>>>> 03ef8674b56d9c70d58848a98bccb58b29331ade
