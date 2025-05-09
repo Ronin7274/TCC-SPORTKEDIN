@@ -23,7 +23,25 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.1);
   }
-  
+  #bio {
+  border: none;
+  /* remove a borda */
+  outline: none;
+  /* remove o contorno ao clicar */
+  resize: none;
+  /* impede redimensionamento manual */
+  background-color: #f0f0f0;
+  /* cor de fundo leve */
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 8px;
+  /* bordas arredondadas (opcional) */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+
   .profile-header {
     display: flex;
     align-items: center;

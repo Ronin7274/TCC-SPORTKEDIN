@@ -54,13 +54,13 @@
 }
 
 body {
-    background-image: url('../imagens/4.png');
+    background-image: url('../imagens/SPORT.svg');
 
     font-family: Arial, sans-serif;
     text-align: center;
     margin-top: 170px;
     color: white; 
-    background-size: 1500px;
+    background-size: 1400px;
 }
 
 input {
