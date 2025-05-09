@@ -32,7 +32,7 @@
 
     <div class="card p-4 shadow-lg" style="width: 350px;">
         <h3 class="text-center mb-3">Cadastro</h3>
-        <form id="formCadastro" onsubmit="senhaOK()" action="salvarUsuario.php">
+        <form id="formCadastro" onsubmit="senhaOK()" action="salvarCadastro.php">
             <div class="mb-3">
                 <label for="name" class="form-label">Nome</label>
                 <input type="text" id="nome" class="form-control" name="nameUser" required>
@@ -73,6 +73,7 @@
                 <label for="confirmarsenha" class="form-label">Confirmar senha</label>
                 <input type="password" id="conformarsenha" class="form-control" name="confirma" required onchange='confereSenha();' required>
 
+                <input type="hidden" value="usuario" name="contaUsuario" readonly>
 
             </div>
             <button type="submit" class="btn btn-success w-100">Cadastrar</button>
