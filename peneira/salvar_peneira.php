@@ -5,7 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $tipo = $_POST['nome_peneira'];
     $horario = $_POST['data_peneira'];
     $fechamento = $_POST['fechamento_peneira'];
-    $descricao = $_POST['descricao'];
+    $descricao = $_POST['texto-peneira'];
     $vagas = intval($_POST['vagas_peneira']);
     //$local = 'A definir'; // ou pode adicionar um campo no formulário
 

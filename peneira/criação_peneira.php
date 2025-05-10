@@ -26,7 +26,7 @@
         </div>
         -->
         <!--campo onde será definida data de acontecimento da peneira-->
-        <div calss="div-data-peneira">
+        <div class="div-data-peneira">
             <label for="data-peneira" class="label-data-peneira">data do evento</label>
             <input type="datetime-local" class="input-data-peneira" name="data_peneira" required id="nome-peneira">
         </div>
@@ -46,7 +46,7 @@
         <!--campo onde será definido o texto de descrição da peneira-->
         <div class="div-texto-peneira">
             <label for="texto-peneira" class="label-texo-peneira"></label>
-            <input type="text" class="input-texto-peneira" name="descricao" id="texto-peneira" required placeholder="Descrição da peneira">
+            <input type="text" class="input-texto-peneira" name="texto-peneira" id="texto-peneira" required placeholder="Descrição da peneira">
         </div>
         <button type="submit" name="criar-peneira" class="criar-peneira">Criar peneira</button>
         
