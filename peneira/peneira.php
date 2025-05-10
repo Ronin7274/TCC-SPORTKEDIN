@@ -1,6 +1,6 @@
 <?php
 
-    require_once 'conexao_peneira.php';
+    require_once '../conexao.php';
 
     $id = $_GET['id'] ?? null;
 
