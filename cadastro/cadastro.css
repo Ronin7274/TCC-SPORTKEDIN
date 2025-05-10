@@ -65,7 +65,7 @@ body {
 
 input {
     padding: 10px;
-    width: 150px;
+    width: 250px;
     text-align: center;
     font-size: 16px;
     color: white; 
@@ -113,6 +113,18 @@ input {
         text-align: center;
         margin-top: 50px;
     }
+
+    .corpo-cadastro{
+        width: 600px;
+        height: 780px;
+        padding-bottom: 50px;
+        padding-top: 50px;
+        padding-left: 100px;
+        padding-right: 100px;
+        
+        background-color: #0000007a;
+        font-size: 12px;
+    }
     
     input {
         padding: 10px;
@@ -124,7 +136,7 @@ input {
     button {
         padding: 10px;
         font-size: 16px;
-        background: #4CAF50;
+        background: #000000;
         color: white;
         border: none;
         cursor: pointer;

@@ -30,16 +30,17 @@
         }
     </script>
 
-    <div class="card p-4 shadow-lg" style="width: 350px;">
+        <div class="corpo-cadastro">
+        <!--<div class="card p-4 shadow-lg w-50 h-20">-->
         <h3 class="text-center mb-3">Cadastro</h3>
         <form id="formCadastro" onsubmit="senhaOK()" action="salvarCadastro.php">
             <div class="mb-3">
-                <label for="name" class="form-label">Nome</label>
-                <input type="text" id="nome" class="form-control" name="nameUser" required>
-
-
+        
                 <label for="CPF" class="form-label">CPF</label>
                 <input type="text" id="cpf" class="form-control" name="cpfUser" required>
+
+                <label for="name" class="form-label">Nome</label>
+                <input type="text" id="nome" class="form-control" name="nameUser" required>
 
                 <label for="rg" class="form-label">RG</label>
                 <input type="text" id="rg" class="form-control" name="rgUser" required>
@@ -47,8 +48,6 @@
 
                 <label for="telefone" class="form-label">Telefone</label>
                 <input type="text" id="telefone" class="form-control" name="TelefUser" required>
-
-
 
                 <label for="endereco" class="form-label">Endereço</label>
                 <input type="text" id="endereco" class="form-control" name="enderecoUser" required>
