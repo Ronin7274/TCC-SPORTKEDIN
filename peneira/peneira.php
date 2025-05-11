@@ -41,10 +41,11 @@
 
 <body>
 
-<h1><?php echo htmlspecialchars($peneira['Tipo']); ?></h1>
+<h1><?php echo htmlspecialchars($peneira['Nome']); ?></h1>
     <p><strong>Data e Horário:</strong> <?php echo htmlspecialchars($peneira['Horario']); ?></p>
+    <p><strong>Fechamento das inscrições</strong> <?php echo htmlspecialchars($peneira['Horario_fechamento']) ?></p>
     <p><strong>Local:</strong> <?php echo htmlspecialchars($peneira['Local']); ?></p>
-    <p><strong>Descrição:</strong> <?php echo nl2br(htmlspecialchars($peneira['descricao'])); ?></p>
+    <p><strong>Descrição:</strong> <?php echo nl2br(htmlspecialchars($peneira['Descricao'])); ?></p>
 
     <h2>Inscritos</h2>
     <?php if (count($inscritos) > 0): ?>

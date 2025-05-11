@@ -2,7 +2,8 @@
 $host = 'localhost';
 $db = 'sportkedin';
 $user = 'root';
-$pass = 'root';
+//alterar a senha dependendo do ambiente onde for testar
+$pass = '';
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";

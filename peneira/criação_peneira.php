@@ -46,7 +46,7 @@
         <!--campo onde será definido o texto de descrição da peneira-->
         <div class="div-texto-peneira">
             <label for="texto-peneira" class="label-texo-peneira"></label>
-            <input type="text" class="input-texto-peneira" name="texto-peneira" id="texto-peneira" required placeholder="Descrição da peneira">
+            <textarea class="input-texto-peneira" name="texto-peneira" id="texto-peneira" required placeholder="Descrição da peneira"></textarea>
         </div>
         <button type="submit" name="criar-peneira" class="criar-peneira">Criar peneira</button>
         

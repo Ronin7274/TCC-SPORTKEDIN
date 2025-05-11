@@ -123,3 +123,8 @@ form {
 .criar-peneira:active {
     background-color: #6d7386;
 }
+
+.input-texto-peneira{
+    resize: none;
+    height: 250px;
+}
