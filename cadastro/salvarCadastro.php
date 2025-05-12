@@ -27,7 +27,7 @@ if ($tipo === 'usuario') {
         $email = $_POST['emailUser'];
         $senha = $_POST['senha'];
         $confirma = $_POST['confirma'];
-        
+
 
         if ($senha != $confirma) {
             die("Erro: As senhas não coincidem.");
@@ -36,11 +36,26 @@ if ($tipo === 'usuario') {
         // Cria um hash seguro da senha usando o algoritmo padrão (bcrypt atualmente)
         $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
 
+        // Verifica duplicidade de dados únicos
+        $verifica = $pdo->prepare("SELECT * FROM Usuario WHERE Telefone = ? OR Email = ? OR RG = ? OR CPF = ?");
+        $verifica->execute([$telefone, $email, $rg, $cpf]);
+        $usuarioExistente = $verifica->fetch(PDO::FETCH_ASSOC);
+
+        if ($usuarioExistente['Telefone'] === $telefone) {
+            echo ("Erro: Já existe um usuário com o mesmo telefone");
+        } elseif ($usuarioExistente['Email'] === $email) {
+            echo ("Erro: Já existe um usuário com o mesmo email");
+        } elseif ($usuarioExistente['RG'] === $rg) {
+            echo ("Erro: Já existe um usuário com o mesmo rg");
+        } elseif ($usuarioExistente['CPF'] === $cpf) {
+            die("Erro: Já existe um usuário com o mesmo telefone");
+        }
+
         // Inserir no banco
         $sql = "INSERT INTO Usuario (Nome, CPF, Telefone, Endereco, RG, Email, Senha, Tipo) VALUES (?, ?, ?, ?, ?, ?, ?, 'usuario')";
 
         $stmt = $pdo->prepare($sql);
-        
+
         $stmt->execute([$nome, $cpf, $telefone, $endereco, $rg, $email, $senhaHash]);
 
         header("Location: ../index.php");
@@ -53,7 +68,7 @@ if ($tipo === 'usuario') {
         $email = $_POST['emailClube'];
         $senha = $_POST['senha'];
         $confirma = $_POST['confirma'];
-        
+
 
         if ($senha != $confirma) {
             die("Erro: As senhas não coincidem.");
@@ -66,7 +81,7 @@ if ($tipo === 'usuario') {
         $sql = "INSERT INTO Clube (Nome, CNPJ, Email, Senha, Tipo) VALUES (?, ?, ?, ?, 'clube')";
 
         $stmt = $pdo->prepare($sql);
-        
+
         $stmt->execute([$nome, $cnpj, $email, $senhaHash]);
 
         header("Location: ../index.php");
@@ -75,4 +90,3 @@ if ($tipo === 'usuario') {
 }
 
 ob_end_flush();
-?>

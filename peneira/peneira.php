@@ -48,15 +48,14 @@
     <p><strong>Descrição:</strong> <?php echo nl2br(htmlspecialchars($peneira['Descricao'])); ?></p>
 
     <h2>Inscritos</h2>
-    <?php if (count($inscritos) > 0): ?>
-        <ul>
-            <?php foreach ($inscritos as $nome): ?>
-                <li><?php echo htmlspecialchars($nome); ?></li>
-            <?php endforeach; ?>
-        </ul>
-    <?php else: ?>
-        <p>Nenhum inscrito até o momento.</p>
-    <?php endif; ?>
+    <?php if (count($inscritos) < $peneira['Vagas']): ?>
+    <form action="inscrever.php" method="POST">
+        <input type="hidden" name="idPeneira" value="<?php echo $id; ?>">
+        <button type="submit">Inscrever-se</button>
+    </form>
+<?php else: ?>
+    <p><strong>Limite de vagas atingido.</strong></p>
+<?php endif; ?>
 
 </body>
 

@@ -16,7 +16,7 @@
             <div class="col-md-4">
                 <div class="card shadow-lg p-4">
                     <h3 class="text-center mb-3">Login</h3>
-                    <form id="loginForm">
+                    <form id="loginForm" method="POST" action="login.php">
                         <div class="mb-3">
                             <label for="email" class="form-label">E-mail</label>
                             <div class="input-group">
@@ -31,6 +31,7 @@
                                 <input type="password" id="password" name="password" class="form-control" required>
                             </div>
                         </div>
+                        <input type="hidden" value="Clube" name="tipoLogin">
                         <button type="submit" class="btn btn-primary w-100">Entrar</button>
                         <p class="text-center mt-3">
                             Não tem uma conta? <a href="../cadastroClube.php" >Cadastre-se</a>

@@ -1,52 +1,54 @@
 <?php
 session_start();
-require_once '../conexao.php';
+error_reporting(E_ALL);
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $email = $_POST['email'];
-    $senhaDigitada = $_POST['password'];
 
-    // Tenta login como USUÁRIO
-    $sqlUsuario = "SELECT * FROM Usuario WHERE email = ?";
-    $stmtUsuario = $conn->prepare($sqlUsuario);
-    $stmtUsuario->bind_param("s", $email);
-    $stmtUsuario->execute();
-    $resUsuario = $stmtUsuario->get_result();
+require_once '../../conexao.php';
 
-    if ($resUsuario->num_rows === 1) {
-        $usuario = $resUsuario->fetch_assoc();
+$login = $_POST['tipoLogin'] ?? null;
 
-        if (password_verify($senhaDigitada, $usuario['senha'])) {
+if ($login === 'Usuario') {
+
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $email = $_POST['email'] ?? '';
+        $senhaDigitada = $_POST['password'] ?? '';
+
+        // Tenta login como USUÁRIO
+        $sqlUsuario = "SELECT * FROM Usuario WHERE Email = ?";
+        $stmt = $pdo->prepare($sqlUsuario);
+        $stmt->execute([$email]);
+        $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($usuario && password_verify($senhaDigitada, $usuario['Senha'])) {
             $_SESSION['idUsuario'] = $usuario['idUsuario'];
             $_SESSION['nome'] = $usuario['Nome'];
             $_SESSION['tipo'] = 'usuario';
 
-            header("Location: areaUsuario.php");
-            exit();
+            header("location: /TCC-SPORTKEDIN/peneira/criação_peneira.php");
+            exit;
         }
     }
+} elseif ($login === 'Clube') {
 
-    // Tenta login como CLUBE
-    $sqlClube = "SELECT * FROM Clube WHERE email = ?";
-    $stmtClube = $conn->prepare($sqlClube);
-    $stmtClube->bind_param("s", $email);
-    $stmtClube->execute();
-    $resClube = $stmtClube->get_result();
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $email = $_POST['email'] ?? '';
+        $senhaDigitada = $_POST['password'] ?? '';
+        // Tenta login como CLUBE
+        $sqlClube = "SELECT * FROM Clube WHERE Email = ?";
+        $stmt = $pdo->prepare($sqlClube);
+        $stmt->execute([$email]);
+        $clube = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    if ($resClube->num_rows === 1) {
-        $clube = $resClube->fetch_assoc();
-
-        if (password_verify($senhaDigitada, $clube['senha'])) {
+        if ($clube && password_verify($senhaDigitada, $clube['Senha'])) {
             $_SESSION['idClube'] = $clube['idClube'];
             $_SESSION['nome'] = $clube['Nome'];
             $_SESSION['tipo'] = 'clube';
 
-            header("Location: areaClube.php");
-            exit();
+            header("location: /TCC-SPORTKEDIN/peneira/criação_peneira.php");
+            exit;
         }
-    }
 
-    // Se nenhum login funcionar
-    echo "<script>alert('E-mail ou senha inválidos'); window.history.back();</script>";
+        // Se nenhum login funcionar
+        echo "<script>alert('E-mail ou senha inválidos'); window.history.back();</script>";
+    }
 }
-?>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div class="container">
         <div class="row justify-content-center">
@@ -31,9 +33,10 @@
                                 <input type="password" id="password" name="password" class="form-control" required>
                             </div>
                         </div>
+                        <input type="hidden" value="Usuario" name="tipoLogin">
                         <button type="submit" class="btn btn-primary w-100">Entrar</button>
                         <p class="text-center mt-3">
-                            Não tem uma conta? <a href="../cadastroUsuario.php" >Cadastre-se</a> 
+                            Não tem uma conta? <a href="../cadastroUsuario.php">Cadastre-se</a>
                             <!--direciona o usuario para o caminho indicado no href. O "../" serve para mandar o usuario para a pasta anterior-->
                         </p>
                     </form>
@@ -46,4 +49,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
