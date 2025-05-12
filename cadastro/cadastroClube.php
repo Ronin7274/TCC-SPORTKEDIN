@@ -28,46 +28,51 @@
     </script>
 
     <div class="card p-4 shadow-lg" style="width: 350px;">
-        <h3 class="text-center mb-3">Cadastro</h3>
-        <form id="formCadastro" onsubmit="senhaOK()" action="salvarCadastro.php">
+        <h3 class="text-center mb-3">Cadastro de clube</h3>
+        <form id="formCadastro" onsubmit="senhaOK()" action="salvarCadastro.php" method="POST">
             <div class="mb-3">
                 <label for="CNPJ" class="form-label">CNPJ</label>
-                <input type="text" id="nome" class="form-control" required>
+                <input type="text" id="cnpj" class="form-control" name="cnpj" required>
            
            
+                <!--o campo de certificado do clube nao sera utilizado
                 <label for="CCF" class="form-label">Certificado de Clube Formador</label>
-                <input type="text" id="nome" class="form-control" required>
+                <input type="text" id="nome" class="form-control" required>-->
             
 
             
+                <!--o campo de estatuto nao sera utilizado
                 <label for="Estatuto" class="form-label">Estatuto</label>
-                <input type="Estatuto" id="Estatuto" class="form-control" required>
+                <input type="Estatuto" id="Estatuto" class="form-control" required>-->
             
 
 
             
                 <label for="Nome" class="form-label">Nome</label>
-                <input type="Nome" id="Nome" class="form-control" required>
+                <input type="Nome" id="Nome" class="form-control" name="nameClube" required>
             
 
 
             
+                <!--nao e necessario o clube informar a modalidade ja que ele pode
+                    criar peneiras de varios tipos
                 <label for="modalidade" class="form-label">Modalidade do clube</label>
-                <input type="modalidade" id="modalidade" class="form-control" required>
+                <input type="modalidade" id="modalidade" class="form-control" required>-->
             
 
 
             
+                <!--nao existe a necessidade de o clube informar um CEP especifico
                 <h2>Consultar CEP</h2>
                 <input type="text" id="cep" placeholder="Digite o CEP" maxlength="8">
                 <button onclick="buscarCep()">Buscar</button>
-                <div id="resultado"></div>
+                <div id="resultado"></div>-->
                 
                 
             
             
                 <label for="email" class="form-label">E-mail</label>
-                <input type="email" id="email" class="form-control" required>
+                <input type="email" id="email" class="form-control" name="emailClube" required>
             
 
             
@@ -75,9 +80,9 @@
                 <input type="password" id="senha" class="form-control" name="senha" required onchange='confereSenha();' required>
 
                 <label for="confirmarsenha" class="form-label">Confirmar senha</label>
-                <input type="password" id="conformarsenha" class="form-control" name="confirma" required onchange='confereSenha();' required>
+                <input type="password" id="confirmarsenha" class="form-control" name="confirma" required onchange='confereSenha();' required>
 
-                <input type="hidden" value="clube" name="ContaClube" readonly> 
+                <input type="hidden" value="clube" name="tipoConta" readonly> 
 
             </div>
             <button type="submit" class="btn btn-success w-100">Cadastrar</button>

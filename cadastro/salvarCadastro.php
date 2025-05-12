@@ -1,7 +1,22 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+ob_start();
+
+echo "<pre>";
+var_dump($_POST);
+echo "</pre>";
+
+if (empty($_POST)) {
+    die("Erro: Nenhum dado foi enviado via POST.");
+}
+
 require_once '../conexao.php';
 
-if ($_POST['contaUsuario'] === 'usuario') {
+$tipo = $_POST['tipoConta'] ?? null;
+
+if ($tipo === 'usuario') {
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $nome = $_POST['nameUser'];
@@ -12,6 +27,7 @@ if ($_POST['contaUsuario'] === 'usuario') {
         $email = $_POST['emailUser'];
         $senha = $_POST['senha'];
         $confirma = $_POST['confirma'];
+        
 
         if ($senha != $confirma) {
             die("Erro: As senhas não coincidem.");
@@ -21,30 +37,42 @@ if ($_POST['contaUsuario'] === 'usuario') {
         $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
 
         // Inserir no banco
-        $sql = "INSERT INTO Usuario (Nome, CPF, Telefone, Endereco, RG, email, senha) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO Usuario (Nome, CPF, Telefone, Endereco, RG, Email, Senha, Tipo) VALUES (?, ?, ?, ?, ?, ?, ?, 'usuario')";
 
-        // Verifica se houve erro na preparação
-        if (!$stmt) {
-            die("Erro ao preparar o statement: " . $conn->error);
-        }
+        $stmt = $pdo->prepare($sql);
+        
+        $stmt->execute([$nome, $cpf, $telefone, $endereco, $rg, $email, $senhaHash]);
 
-        // Associa os parâmetros ao statement
-        $stmt->bind_param("sssssss", $nome, $cpf, $telefone, $endereco, $rg, $email, $senhaHash);
-
-        // Executa o comando
-        if ($stmt->execute()) {
-
-            $idUsuario = $stmt->insert_id;
-
-            // Se der certo, redireciona para página de login ou mostra mensagem
-            echo "<script>alert('Usuário cadastrado com sucesso!'); window.location.href = '../index.php';</script>";
-        } else {
-            // Se der erro, exibe mensagem
-            echo "Erro ao cadastrar: " . $stmt->error;
-        }
-
-        // Fecha o statement e conexão
-        $stmt->close();
-        $conn->close();
+        header("Location: ../index.php");
+        exit;
     }
-}if ($_POST['contaClube'] === 'clube'){}
+} elseif ($tipo === 'clube') {
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $nome = $_POST['nameClube'];
+        $cnpj = $_POST['cnpj'];
+        $email = $_POST['emailClube'];
+        $senha = $_POST['senha'];
+        $confirma = $_POST['confirma'];
+        
+
+        if ($senha != $confirma) {
+            die("Erro: As senhas não coincidem.");
+        }
+
+        // Cria um hash seguro da senha usando o algoritmo padrão (bcrypt atualmente)
+        $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
+
+        // Inserir no banco
+        $sql = "INSERT INTO Clube (Nome, CNPJ, Email, Senha, Tipo) VALUES (?, ?, ?, ?, 'clube')";
+
+        $stmt = $pdo->prepare($sql);
+        
+        $stmt->execute([$nome, $cnpj, $email, $senhaHash]);
+
+        header("Location: ../index.php");
+        exit;
+    }
+}
+
+ob_end_flush();
+?>

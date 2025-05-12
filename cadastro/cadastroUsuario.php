@@ -26,14 +26,15 @@
         }
 
         function senhaOK() {
-            alert("Senha iguais")
+            alert("Senha iguais");
+            return true;
         }
     </script>
 
         <div class="corpo-cadastro">
         <!--<div class="card p-4 shadow-lg w-50 h-20">-->
-        <h3 class="text-center mb-3">Cadastro</h3>
-        <form id="formCadastro" onsubmit="senhaOK()" action="salvarCadastro.php">
+        <h3 class="text-center mb-3">Cadastro de jogador</h3>
+        <form id="formCadastro" onsubmit="senhaOK()" action="salvarCadastro.php" method="POST">
             <div class="mb-3">
         
                 <label for="CPF" class="form-label">CPF</label>
@@ -47,18 +48,18 @@
 
 
                 <label for="telefone" class="form-label">Telefone</label>
-                <input type="text" id="telefone" class="form-control" name="TelefUser" required>
+                <input type="text" id="telefone" class="form-control" name="telefUser" required>
 
                 <label for="endereco" class="form-label">Endereço</label>
                 <input type="text" id="endereco" class="form-control" name="enderecoUser" required>
 
-
+                <!-- o CEP nao sera necessario
                 <h2>Consultar CEP</h2>
                 <input type="text" id="cep" placeholder="Digite o CEP" maxlength="8">
                 <button onclick="buscarCep()">Buscar</button>
                 <div id="resultado"></div>
                 <script src="script.js"></script>
-
+                -->
 
 
                 <label for="email" class="form-label">E-mail</label>
@@ -72,7 +73,7 @@
                 <label for="confirmarsenha" class="form-label">Confirmar senha</label>
                 <input type="password" id="conformarsenha" class="form-control" name="confirma" required onchange='confereSenha();' required>
 
-                <input type="hidden" value="usuario" name="contaUsuario" readonly>
+                <input type="hidden" value="usuario" name="tipoConta" readonly>
 
             </div>
             <button type="submit" class="btn btn-success w-100">Cadastrar</button>
