@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Perfil dos clubes - Peneiras Esportivas</title>
-  <link rel="stylesheet" href="perfil usuario.css">
+  <title>Perfil dos Clubes - Peneiras Esportivas</title>
+  <link rel="stylesheet" href="perfil dos clube.css?v=1s">
 </head>
 <body>
   <header class="header">
     <h1>Peneiras Esportivas</h1>
-    <!--colocar nossa logo-->
+    <!-- Colocar logo -->
+     header("Location: perfil_usuario.html");
   </header>
 
   <main class="corpo-do-perfil">
@@ -17,31 +18,25 @@
       <img src="logo dos clube.jpg" alt="Foto de Perfil" class="foto-perfil">
       <div class="espaço-entre-elementos">
         <h2>GR FAVELA</h2>
-        <!--puxar do banco de dados o nome do clubes-->
-        <textarea id="bio" name="bio" rows="4" cols="90" maxlength="150"
-        placeholder="Escreva sobre você..."></textarea>
-    <!-- area dos clube,temos que ver para puxar as informaçoes do banco de dados aqui é so uma base -->
+        <!-- Aqui você pode colocar o nome real do clube -->
+        <textarea name="bio_clube" rows="4" cols="90" maxlength="150" placeholder="Escreva algo sobre o clube..."></textarea>
+        <!-- Aqui você pode carregar ou salvar a biografia do clube no banco de dados -->
       </div>
     </section>
+
     <section class="historico-de-campeonatos">
-      <h3>Histórico de campeonatos</h3>
-      <textarea id="bio" name="bio" rows="4" cols="40" maxlength="150"></textarea>
-        
-    <!-- por onde o atleta ja passou-->
+      <h3>Histórico de Campeonatos</h3>
+      <textarea name="historico_campeonatos" rows="4" cols="40" maxlength="300" placeholder="Digite os campeonatos que o clube participou..."></textarea>
+      <!-- Aqui você pode preencher automaticamente com dados do banco -->
     </section>
 
-    <section class="contato-do-clube">
+    <section class="contato-clube">
       <h3>Contato</h3>
-      <p>Email: atleta@email.com</p>
+      <p>Email: clube@email.com</p>
       <p>Telefone: (11) 99999-9999</p>
-    <!--area para se comunicar com atleta-->
+      <!-- Aqui você pode substituir por dados reais do clube -->
     </section>
   </main>
 
-  <!--
-  <footer class="rodape">
-    <p>SPORTTALENT</p>
-    rodapé vamos ver oque colocar aqui ainda
-  </footer>-->
 </body>
 </html>

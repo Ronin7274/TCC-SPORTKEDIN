@@ -1,0 +1,53 @@
+body {
+    color: white;
+  }
+
+  .navbar .navbar-brand,
+  .navbar .nav-link,
+  .navbar .nav-link svg {
+    color: white;
+    fill: white ;
+  }
+
+  .navbar .nav-link:hover,
+  .navbar .navbar-brand:hover {
+    color: rgb(12, 104, 0);
+  }
+
+  /* Estilo para o menu lateral */
+  #sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #222222;
+    color: white;
+    transition: right 0.3s;
+    padding-top: 20px;
+    z-index: 1050;
+  }
+
+  #sidebar a {
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+  }
+
+  #sidebar a:hover {
+    background-color:rgb(12, 104, 0) ;
+  }
+
+  /* Estilo para o botão de abertura */
+  .navbar-toggler {
+    border: none;
+    background: none;
+    outline: none;
+  }
+
+  .navbar-toggler-icon {
+    background-color: white;
+    padding: 10px;
+  }

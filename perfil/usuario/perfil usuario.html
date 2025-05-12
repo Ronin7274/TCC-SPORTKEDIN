@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Perfil de Atleta - Peneiras Esportivas</title>
-  <link rel="stylesheet" href="perfil usuario.css">
+  <link rel="stylesheet" href="perfil usuario.css?v=1">
 </head>
-
 <body>
   <header class="header">
     <h1>Peneiras Esportivas</h1>
-    <!--colocar nossa logo-->
+    <!-- Colocar logo -->
+    
+
   </header>
 
   <main class="corpo-do-perfil">
@@ -19,34 +19,24 @@
       <img src="wesley alemao.jpg" alt="Foto de Perfil" class="foto-perfil">
       <div class="espaço-entre-elementos">
         <h2>Nome do Atleta</h2>
-        <textarea id="bio" name="bio" rows="4" cols="90" maxlength="150"
-        placeholder="Escreva algo sobre você..."></textarea>
-
-        <!--puxar do banco de dados o nome do atleta-->
-
-
+        <textarea name="bio_usuario" rows="4" cols="90" maxlength="150" placeholder="Escreva algo sobre você..."></textarea>
+        <!-- Aqui você pode carregar ou salvar a biografia do usuário no banco de dados -->
       </div>
     </section>
+
     <section class="historico-de-peneiras">
-      <h3>Historico de Peneiras</h3>
-      <textarea id="bio" name="bio" rows="4" cols="40" maxlength="150" placeholder=""></textarea>
-      <!--por onde o atleta ja passou-->
+      <h3>Histórico de Peneiras</h3>
+      <textarea name="historico" rows="4" cols="40" maxlength="300" placeholder="Digite os clubes ou peneiras que você já participou..."></textarea>
+      <!-- Aqui você pode preencher automaticamente com dados do banco -->
     </section>
 
     <section class="contato-atleta">
       <h3>Contato</h3>
       <p>Email: atleta@email.com</p>
       <p>Telefone: (11) 99999-9999</p>
-      <!--area para se comunicar com atleta-->
+      <!-- Aqui você pode substituir por dados reais do usuário -->
     </section>
   </main>
 
-  <!--
-  <footer class="rodape">
-    <p>SPORTTALENT</p>
-    rodapé vamos ver oque colocar aqui ainda
-  </footer>-->
-
 </body>
-
 </html>
